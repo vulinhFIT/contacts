@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Võ Thị Thùy Dương - Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Võ Thị Thùy Dương - Chuyên viên Phòng Tổ chức - Hành chính, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM" />
+  <meta property="og:title" content="Võ Thị Thùy Dương - HCMUS" />
+  <meta property="og:description"
+        content="Chuyên viên Phòng Tổ chức - Hành chính, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM" />
+  <meta property="og:type" content="profile" />
+  <!-- Sau này anh thay đúng đường dẫn ảnh đại diện -->
+  <meta property="og:image"
+        content="https://vulinhfit.github.io/contacts-thanhdoan/bio/vo-thi-thuy-duong/avatar.jpg" />
+
+  <style>
+    :root {
+      --primary: #e91e63;           /* hồng cánh sen chủ đạo */
+      --primary-dark: #c2185b;
+      --bg: #2b1020;
+      --card-bg: #ffffff;
+      --text-main: #111827;
+      --text-sub: #6b7280;
+      --radius-xl: 26px;
+      --shadow-strong: 0 20px 45px rgba(24, 7, 15, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #f48fb1, #2b1020 55%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      color: var(--text-main);
+    }
+
+    .page {
+      width: 100%;
+      max-width: 480px;
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-strong);
+      overflow: hidden;
+    }
+
+    /* ------------ HEADER ------------ */
+
+    .header {
+      position: relative;
+      background: linear-gradient(135deg, #e91e63, #f48fb1);
+      color: #fdf2f8;
+      padding: 22px 20px 70px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      opacity: 0.95;
+    }
+
+    .top-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.25);
+      background: rgba(15, 23, 42, 0.16);
+      color: #fce7f3;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+
+    .lang-option {
+      padding: 2px 4px;
+      border-radius: 999px;
+      opacity: 0.6;
+      font-weight: 600;
+    }
+
+    .lang-option.active {
+      background: #fdf2f8;
+      color: #9d174d;
+      opacity: 1;
+    }
+
+    .cover {
+      margin-top: 16px;
+      height: 80px;
+      border-radius: 18px;
+      background: radial-gradient(circle at left, #fce7f3, #be185d);
+      opacity: 0.9;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 999px;
+      background: rgba(248, 187, 208, 0.35);
+      top: -60px;
+      right: -40px;
+      filter: blur(4px);
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      border: 1px solid rgba(254, 242, 242, 0.5);
+      top: 20px;
+      left: 10px;
+      opacity: 0.7;
+    }
+
+    .avatar-wrapper {
+      position: absolute;
+      left: 50%;
+      bottom: -42px;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #fdf2f8, #f9a8d4);
+      box-shadow: 0 10px 25px rgba(80, 7, 36, 0.6);
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ------------ BODY ------------ */
+
+    .card-body {
+      padding: 60px 18px 18px;
+      background: linear-gradient(to bottom, #fde7f1 0, #f9fafb 45%);
+    }
+
+    .name-block {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .name-block h1 {
+      margin: 0 0 4px;
+      font-size: 1.7rem;
+      letter-spacing: 0.03em;
+    }
+
+    .role {
+      font-size: 0.96rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-sub);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .dept {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 2px;
+    }
+
+    .org {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #be185d;
+    }
+
+    .info-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 8px 0 2px;
+    }
+
+    .info-chip {
+      font-size: 0.78rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid #fecdd3;
+      background: #fdf2f8;
+      color: #9f1239;
+    }
+
+    /* ------------ PRIMARY ACTIONS ------------ */
+
+    .primary-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 11px 14px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.96rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.08s ease, box-shadow 0.12s ease,
+        background 0.12s ease, filter 0.12s ease;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fdf2f8;
+      box-shadow: 0 10px 22px rgba(190, 24, 93, 0.45);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.96);
+      color: #111827;
+      border: 1px solid rgba(248, 187, 208, 0.8);
+    }
+
+    .btn-ghost:hover {
+      filter: brightness(0.97);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .btn-row .btn {
+      flex: 1;
+    }
+
+    .section-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-sub);
+      margin: 16px 4px 6px;
+      font-weight: 600;
+    }
+
+    /* ------------ SOCIAL LIST ------------ */
+
+    .social-list {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .social-item {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 4px rgba(248, 187, 208, 0.7);
+    }
+
+    .social-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .social-icon-wrap {
+      background: #fdf2f8;
+      border-radius: 999px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    .social-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .social-name {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #9f1239;
+      margin-bottom: 2px;
+    }
+
+    .social-link {
+      font-size: 0.85rem;
+      color: #4b5563;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 220px;
+    }
+
+    .social-link:hover {
+      color: #be185d;
+      text-decoration: underline;
+    }
+
+    .social-right a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 6px;
+      background: #fdf2f8;
+    }
+
+    .social-open-icon {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    /* ------------ ABOUT ------------ */
+
+    .about {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #4b5563;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 18px;
+      padding: 10px 12px;
+      box-shadow: 0 1px 6px rgba(248, 187, 208, 0.8);
+    }
+
+    /* ------------ FOOTER ------------ */
+
+    .footer {
+      text-align: center;
+      font-size: 0.74rem;
+      color: #9ca3af;
+      padding: 10px 4px 6px;
+    }
+
+    /* ------------ RESPONSIVE ------------ */
+
+    @media (max-width: 480px) {
+      .header {
+        padding: 18px 16px 66px;
+      }
+
+      .card-body {
+        padding: 58px 14px 16px;
+      }
+
+      .social-link {
+        max-width: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="top-bar">
+        <span data-i18n="copyright">© 2025 HCMUS</span>
+        <span data-i18n="status_secure">Kết nối an toàn</span>
+        <button class="lang-switch" id="lang-switch" aria-label="Đổi ngôn ngữ">
+          <span class="lang-option active" data-lang="vi">VI</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+      </div>
+
+      <div class="cover"></div>
+
+      <div class="avatar-wrapper">
+        <!-- Anh thay ảnh thật sau: avatar.jpg -->
+        <img src="avatar.jpg" alt="Ảnh Võ Thị Thùy Dương" class="avatar" />
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <main class="card-body">
+      <!-- Thông tin cơ bản -->
+      <section class="name-block">
+        <h1>Võ Thị Thùy Dương</h1>
+        <div class="role" data-i18n="role">
+          Chuyên viên Phòng Tổ chức - Hành chính
+        </div>
+        <div class="dept" data-i18n="dept">
+          Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM
+        </div>
+        <div class="org" data-i18n="org">
+          Phòng Tổ chức - Hành chính (HCMUS)
+        </div>
+
+        <div class="info-chip-row">
+          <div class="info-chip" data-i18n="tag1">Quản trị nhân sự</div>
+          <div class="info-chip" data-i18n="tag2">Quản lý hành chính công</div>
+          <div class="info-chip" data-i18n="tag3">Tổ chức - Hành chính</div>
+        </div>
+      </section>
+
+      <!-- Nút liên hệ chính -->
+      <section class="primary-contact">
+        <a class="btn btn-primary" href="tel:+84979993308">
+          <img
+            src="../../assets/icon/phone-calling.svg"
+            class="btn-icon"
+            alt=""
+          />
+          0979 993 308
+        </a>
+
+        <div class="btn-row">
+          <button class="btn btn-ghost" type="button" data-share>
+            <img
+              src="../../assets/icon/share-product.svg"
+              class="btn-icon"
+              alt=""
+            />
+            <span data-i18n="share_page">Chia sẻ trang</span>
+          </button>
+          <a class="btn btn-ghost" href="vttduong.vcf" download>
+            <img
+              src="../../assets/icon/Profile.png"
+              class="btn-icon"
+              alt=""
+            />
+            <span data-i18n="save_contact">Lưu danh bạ</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Mạng xã hội & liên kết -->
+      <h2 class="section-title" data-i18n="social_title">
+        Mạng xã hội & liên kết
+      </h2>
+      <section class="social-list">
+        <!-- WEBSITE HCMUS -->
+        <article class="social-item">
+          <div class="social-left">
+            <div class="social-icon-wrap">
+              <img
+                src="../../assets/icon/Website.png"
+                alt="Website HCMUS"
+                class="social-icon"
+              />
+            </div>
+            <div class="social-text">
+              <div class="social-name" data-i18n="website_title">
+                Website Trường Đại học Khoa học Tự nhiên
+              </div>
+              <a
+                class="social-link"
+                href="https://hcmus.edu.vn/"
+                target="_blank"
+                rel="noopener"
+              >
+                hcmus.edu.vn
+              </a>
+            </div>
+          </div>
+          <div class="social-right">
+            <a
+              href="https://hcmus.edu.vn/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../../assets/icon/share-arrow.svg"
+                alt="Mở Website"
+                class="social-open-icon"
+              />
+            </a>
+          </div>
+        </article>
+
+        <!-- FACEBOOK -->
+        <article class="social-item">
+          <div class="social-left">
+            <div class="social-icon-wrap">
+              <img
+                src="../../assets/icon/Facebook.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+            </div>
+            <div class="social-text">
+              <div class="social-name">Facebook</div>
+              <a
+                class="social-link"
+                href="https://www.facebook.com/rainbow308"
+                target="_blank"
+                rel="noopener"
+              >
+                facebook.com/rainbow308
+              </a>
+            </div>
+          </div>
+          <div class="social-right">
+            <a
+              href="https://www.facebook.com/rainbow308"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../../assets/icon/share-arrow.svg"
+                alt="Mở Facebook"
+                class="social-open-icon"
+              />
+            </a>
+          </div>
+        </article>
+
+        <!-- EMAIL -->
+        <article class="social-item">
+          <div class="social-left">
+            <div class="social-icon-wrap">
+              <img
+                src="../../assets/icon/Email.png"
+                alt="Email"
+                class="social-icon"
+              />
+            </div>
+            <div class="social-text">
+              <div class="social-name" data-i18n="email_work">
+                Email công việc
+              </div>
+              <a
+                class="social-link"
+                href="mailto:vttduongkhtn@gmail.com"
+              >
+                vttduongkhtn@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="social-right">
+            <a href="mailto:vttduongkhtn@gmail.com">
+              <img
+                src="../../assets/icon/share-arrow.svg"
+                alt="Gửi email"
+                class="social-open-icon"
+              />
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Giới thiệu -->
+      <h2 class="section-title" data-i18n="about_title">Giới thiệu ngắn</h2>
+      <section class="about" data-i18n="about_text">
+        Chuyên viên Phòng Tổ chức - Hành chính, Trường Đại học Khoa học Tự
+        nhiên, Đại học Quốc gia TP. Hồ Chí Minh; phụ trách các mảng công việc
+        liên quan đến quản trị nhân sự, quản lý hành chính công, hỗ trợ tổ
+        chức, vận hành hiệu quả các hoạt động của nhà trường.
+      </section>
+
+      <footer class="footer" data-i18n="footer">
+        Mở trang này bằng cách chạm thẻ NFC hoặc quét mã QR được in trên thẻ
+        danh bạ điện tử.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ----- SHARE BUTTON -----
+    (function () {
+      const shareBtn = document.querySelector("[data-share]");
+      if (!shareBtn) return;
+
+      shareBtn.addEventListener("click", async () => {
+        const url = window.location.href;
+        const title = document.title;
+
+        if (navigator.share) {
+          try {
+            await navigator.share({ title, url });
+          } catch (e) {
+            // user cancelled
+          }
+        } else if (navigator.clipboard) {
+          try {
+            await navigator.clipboard.writeText(url);
+            const original = shareBtn.textContent;
+            shareBtn.textContent = "Đã copy link!";
+            setTimeout(() => {
+              shareBtn.textContent = original;
+            }, 1800);
+          } catch (e) {
+            alert("Hãy copy link trên thanh địa chỉ để chia sẻ.");
+          }
+        } else {
+          alert("Hãy copy link trên thanh địa chỉ để chia sẻ.");
+        }
+      });
+    })();
+
+    // ----- I18N (VI / EN) -----
+    const translations = {
+      vi: {
+        status_secure: "Kết nối an toàn",
+        role: "Chuyên viên Phòng Tổ chức - Hành chính",
+        dept: "Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM",
+        org: "Phòng Tổ chức - Hành chính (HCMUS)",
+        copyright: "© 2025 HCMUS",
+        tag1: "Quản trị nhân sự",
+        tag2: "Quản lý hành chính công",
+        tag3: "Tổ chức - Hành chính",
+        share_page: "Chia sẻ trang",
+        save_contact: "Lưu danh bạ",
+        social_title: "Mạng xã hội & liên kết",
+        website_title: "Website Trường Đại học Khoa học Tự nhiên",
+        about_title: "Giới thiệu ngắn",
+        email_work: "Email công việc",
+        about_text:
+          "Chuyên viên Phòng Tổ chức - Hành chính, Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia TP. Hồ Chí Minh; phụ trách các mảng công việc liên quan đến quản trị nhân sự, quản lý hành chính công, hỗ trợ tổ chức và vận hành hiệu quả các hoạt động của nhà trường.",
+        footer:
+          "Mở trang này bằng cách chạm thẻ NFC hoặc quét mã QR được in trên thẻ danh bạ điện tử."
+      },
+      en: {
+        status_secure: "Secure connection",
+        role: "Officer, Organization–Administration Office",
+        dept: "University of Science, VNU-HCM",
+        org: "Organization–Administration Office (HCMUS)",
+        copyright: "© 2025 HCMUS",
+        tag1: "Human resource management",
+        tag2: "Public administration",
+        tag3: "Organization & administration",
+        share_page: "Share page",
+        save_contact: "Save contact",
+        social_title: "Social & links",
+        website_title: "University of Science website",
+        about_title: "Short bio",
+        email_work: "Work email",
+        about_text:
+          "Officer at the Organization–Administration Office, University of Science, Vietnam National University Ho Chi Minh City, working in human resource management, public administration and supporting the effective operation of university activities.",
+        footer:
+          "Open this page by tapping the NFC card or scanning the QR code printed on it."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {
+          // dùng innerHTML để hỗ trợ xuống dòng, <br>, v.v.
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.querySelectorAll(".lang-option").forEach((el) => {
+        el.classList.toggle("active", el.dataset.lang === lang);
+      });
+      try {
+        localStorage.setItem("contact_lang", lang);
+      } catch (e) {}
+    }
+
+    (function () {
+      const switcher = document.getElementById("lang-switch");
+      if (!switcher) return;
+
+      switcher.addEventListener("click", () => {
+        const current =
+          document.documentElement.getAttribute("lang") || "vi";
+        setLanguage(current === "vi" ? "en" : "vi");
+      });
+
+      let saved = "vi";
+      try {
+        saved = localStorage.getItem("contact_lang") || "vi";
+      } catch (e) {}
+      setLanguage(saved);
+    })();
+  </script>
+</body>
+</html>
